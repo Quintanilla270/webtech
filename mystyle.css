@@ -1,0 +1,76 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+p {
+    color: white;
+    background-color: #0C2340;
+    width: auto;
+    white-space: pre-line;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    background-color: gainsboro;
+    text-decoration: underline;
+}
+
+#image-centered {
+    width: 350;
+    height: 475;
+    opacity: 100%;
+    border-radius: 5%;
+    display:block;
+    margin: 0px auto;
+    
+}
+
+table {
+    border-color:beige;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    border-radius: 2%;
+}
+
+li {
+    width: 35%;
+    padding: 5px;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.basetext {
+    color: white;
+    size: 100px;
+}
+
+#contactform {
+    width: 600;
+    border-style: solid;
+    border-color: black;
+    border-spacing: 10px;
+    padding: 5px;
+    background-color: #0C2340;
+}
+
+td {
+    padding:5px;
+    color:white;
+}
+
+.pageheadings {
+    font-weight: bold;
+    font-size: 35px;
+}
