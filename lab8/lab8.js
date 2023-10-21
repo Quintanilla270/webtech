@@ -13,5 +13,5 @@ function getDataFromForm() {
 }
 
 function runAjax(first_name, last_name) {
-  $.
+  
 }
