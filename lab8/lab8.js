@@ -8,7 +8,7 @@ function getDataFromForm() {
 }
 
 function runAjax(first_name, last_name) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.open('GET', `./ajax.php?fname=${fname}&lame=${lname}`, true);
   xhr.onload = function() {
     if(xhr.status === 200) {
