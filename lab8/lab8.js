@@ -1,18 +1,18 @@
 
 function getDataFromForm() {
-  const f_name = document.querySelector('input[name="fname"]').value;
-  const l_name = document.querySelector('input[name="lname"]').value;
+  var f_name = document.querySelector('input[name="fname"]').value;
+  var l_name = document.querySelector('input[name="lname"]').value;
 
   runAjax(f_name, l_name);
   alert("it worked!");
 }
 
 function runAjax(first_name, last_name) {
-  const xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
   xhr.open('GET', `./ajax.php?fname=${fname}&lame=${lname}`, true);
   xhr.onload = function() {
-    if(xhr.status === 200) {
-      document.getElementById("responseString").innerHTML = xhttp.responseText;
+    if(this.status === 200) {
+      document.getElementById("responseString").innerText = this.responseText;
       alert('LOADED')
     }
   }
