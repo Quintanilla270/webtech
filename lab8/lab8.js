@@ -1,5 +1,8 @@
 
 function getDataFromForm() {
+  const fname = document.querySelector('input[name="fname"]').value;
+  const lname = document.querySelector('input[name="lname"]').value;
+  
   runAjax(f_name, l_name);
   alert("it worked!");
 }
