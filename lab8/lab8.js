@@ -3,6 +3,8 @@ function getDataFromForm() {
   var f_name = document.querySelector('input[name="fname"]');
   var l_name = document.querySelector('input[name="lname"]');
 
+  print(f_name);
+  print(l_name);
   runAjax(f_name, l_name);
   alert("it worked!");
 }
