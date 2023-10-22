@@ -8,13 +8,13 @@ function getDataFromForm() {
 }
 
 function runAjax(first_name, last_name) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', `./ajax.php?fname=${fname}&lname=${lname}`, true);
-  xhr.onload = function() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
     if(this.status === 200) {
-      document.getElementById("responseString").innerText = this.responseText;
+      document.getElementById("responseString").innerHTML = this.responseText;
       alert('LOADED')
     }
   }
-  xhr.send();
+  xhttp.open('GET', './ajax.php?fname=${fname}&lname=${lname}', true);
+  xhttp.send();
 }
