@@ -9,7 +9,7 @@ function getDataFromForm() {
 
 function runAjax(first_name, last_name) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', `./ajax.php?fname=${fname}&lame=${lname}`, true);
+  xhr.open('GET', `./ajax.php?fname=${fname}&lname=${lname}`, true);
   xhr.onload = function() {
     if(this.status === 200) {
       document.getElementById("responseString").innerText = this.responseText;
