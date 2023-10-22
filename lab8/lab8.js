@@ -3,8 +3,6 @@ function getDataFromForm() {
   var f_name = document.querySelector('input[name="fname"]');
   var l_name = document.querySelector('input[name="lname"]');
 
-  print(f_name);
-  print(l_name);
   runAjax(f_name, l_name);
   alert("it worked!");
 }
@@ -17,6 +15,6 @@ function runAjax(first_name, last_name) {
       alert('LOADED')
     }
   }
-  xhttp.open('GET', './ajax.php?fname=${fname}&lname=${lname}', true);
+  xhttp.open('GET', 'ajax.php', true);
   xhttp.send();
 }
