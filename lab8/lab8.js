@@ -9,7 +9,7 @@ function runAjax(first_name, last_name) {
   xhr.open('GET', `./ajax.php?fname=${fname}&lame=${lname}`, true);
   xhr.onload = function() {
     if(xhr.status === 200) {
-      document.getElementById("responseString").innerText = this.responseText;
+      document.getElementById("responseString").innerHTML = xhttp.responseText;
       alert('LOADED')
     }
   }
