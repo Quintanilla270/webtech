@@ -7,7 +7,7 @@ function getDataFromForm() {
   alert("it worked!");
 }
 
-function runAjax(fname, lname) {
+function runAjax(first_name, last_name) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     if(this.status === 200) {
@@ -15,6 +15,6 @@ function runAjax(fname, lname) {
       alert('LOADED')
     }
   }
-  xhttp.open('GET', 'ajax.php', true);
+  xhttp.open('GET', 'ajax.php?fname=${fname}&lname=${lname}', true);
   xhttp.send();
 }
