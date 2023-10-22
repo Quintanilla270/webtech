@@ -1,13 +1,13 @@
 
 function getDataFromForm() {
-  var f_name = document.querySelector('input[name="fname"]');
-  var l_name = document.querySelector('input[name="lname"]');
+  var fname = document.querySelector('input[name="fname"]');
+  var lname = document.querySelector('input[name="lname"]');
 
-  runAjax(f_name, l_name);
+  runAjax(fname, lname);
   alert("it worked!");
 }
 
-function runAjax(first_name, last_name) {
+function runAjax(fname, lname) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     if(this.status === 200) {
