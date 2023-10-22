@@ -15,6 +15,6 @@ function runAjax(first_name, last_name) {
       alert('LOADED')
     }
   }
-  xhttp.open('GET', 'ajax.php?fname=${fname}&lname=${lname}', true);
+  xhttp.open('GET', 'ajax.php?fname=' + first_name + '&lname=' + last_name, true);
   xhttp.send();
 }
