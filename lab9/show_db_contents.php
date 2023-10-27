@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$db_host="webtechserver.mysql.database.azure.com";        //Change this
+$db_host="webtechserver.mysql.database.azure.com";      //Change this
 $db_user="webtechadmin";        //Change this
 $db_pass="Jq9181pass";        //Change this
 $db_name="z_url_set_1";     //Do not change
