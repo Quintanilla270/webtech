@@ -1,29 +1,26 @@
 <?php
+// Read the contents of the user_data.txt file
+$data = file_get_contents('private/user_data.txt');
 
-// Open the file in read mode
-$file = fopen("data.txt", "r");
+// Check if the file contains data
+if ($data) {
+    // Split the data into an array of lines
+    $lines = explode("\n", $data);
 
-// Read the file contents into an array
-$data = [];
-while (($line = fgets($file)) !== false) {
-    $data[] = $line;
+    // Display the data in a table format
+    echo "<table>";
+    echo "<tr><th>First Name</th><th>Last Name</th></tr>";
+
+    foreach ($lines as $line) {
+        $parts = explode(",", $line);
+        $firstName = $parts[0];
+        $lastName = $parts[1];
+
+        echo "<tr><td>$firstName</td><td>$lastName</td></tr>";
+    }
+
+    echo "</table>";
+} else {
+    echo "No data found in the user_data.txt file.";
 }
-
-// Close the file
-fclose($file);
-
-// Create a table header
-echo "<table>";
-echo "<tr><th>Line Number</th><th>Line Content</th></tr>";
-
-// Iterate through the data array and display each line in a table row
-for ($i = 0; $i < count($data); $i++) {
-    echo "<tr>";
-    echo "<td>" . ($i + 1) . "</td>";
-    echo "<td>" . $data[$i] . "</td>";
-    echo "</tr>";
-}
-
-// Close the table
-echo "</table>";
 ?>
