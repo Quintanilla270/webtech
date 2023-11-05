@@ -1,20 +1,29 @@
 <?php
+// Check if the post request contains first and last name
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['first_name']) && isset($_POST['last_name'])) {
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
 
-// Check if the form has been submitted
-if (isset($_POST['submit'])) {
+    // Create and append data to a file in the private directory
+    $data = "$first_name,$last_name\n";
+    $filename = 'private/user_data.txt';
 
-    // Get the form data
-    $data = $_POST['data'];
+    // Check if the directory exists
+    if (!is_dir('private')) {
+        mkdir('private');
+    }
+
+    // Open the file for appending
+    $file = fopen($filename, 'a');
 
     // Write the data to the file
-    $filePath = '/path/to/file.txt';
-    $file = fopen($filePath, 'a');
-
     fwrite($file, $data);
+
+    // Close the file
     fclose($file);
 
-    // Display a success message
-    echo 'The data was successfully written to the file.';
+    echo "Data saved to $filename";
+} else {
+    echo "Error: Missing first and last name in the POST request.";
 }
-
 ?>
