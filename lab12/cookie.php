@@ -1,8 +1,10 @@
 <?php
 
-$cookie_name = "cs4413"
-$cookie_value = "Joe Quintanilla"
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+$cookie_name = "cs4413";
+$cookie_value = "cs4413";
+$expiration_time = time() + 60 * 60 * 24 * 7;
+
+setcookie($cookie_name, $cookie_value, $expiration_time);
 
 if(!isset($_COOKIE[$cookie_name])) {
     echo "Cookie named '" . $cookie_name . "' is not set!";
