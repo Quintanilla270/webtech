@@ -5,7 +5,7 @@ $cookie_value = "cs4413";
 $expiration_time = time() + 60 * 60 * 24 * 7;
 
 if(isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is already set!";
+    echo "Cookie named '" . $cookie_name . "' is already set!<br>";
     echo "Value is: " . $_COOKIE[$cookie_name];
 }
 else {
