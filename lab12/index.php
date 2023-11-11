@@ -12,7 +12,6 @@ else {
     echo "Cookie '" . $cookie_name . "' is not set!<br>";
     echo "Setting cookie now...";
     setcookie($cookie_name, $cookie_value, $expiration_time);
-    echo "Value is: " . $_COOKIE[$cookie_name];
 }
 
 ?>
